@@ -45,8 +45,7 @@ public class StepDefinitions {
     while (!found) {
 
       for (int i = 0; i < elements.size(); i++) {
-        WebElement ele =
-            elements.get(i).findElement(By.xpath("//h3[@class='r']")).findElement(By.tagName("a"));
+        WebElement ele = elements.get(i).findElement(By.xpath("//h3[@class='r']/a"));
         String url = ele.getAttribute("href");
         if (url.contains("amazon")) {
           amazonSite = url;
